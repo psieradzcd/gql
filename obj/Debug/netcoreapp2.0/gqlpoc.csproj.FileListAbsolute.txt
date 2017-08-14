@@ -1,0 +1,11 @@
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/libe_sqlite3.so
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/gqlpoc.deps.json
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/gqlpoc.runtimeconfig.json
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/gqlpoc.runtimeconfig.dev.json
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/gqlpoc.dll
+/home/ja/code/dotnet/gqlpoc/bin/Debug/netcoreapp2.0/gqlpoc.pdb
+/home/ja/code/dotnet/gqlpoc/obj/Debug/netcoreapp2.0/gqlpoc.csproj.CoreCompileInputs.cache
+/home/ja/code/dotnet/gqlpoc/obj/Debug/netcoreapp2.0/gqlpoc.AssemblyInfoInputs.cache
+/home/ja/code/dotnet/gqlpoc/obj/Debug/netcoreapp2.0/gqlpoc.AssemblyInfo.cs
+/home/ja/code/dotnet/gqlpoc/obj/Debug/netcoreapp2.0/gqlpoc.dll
+/home/ja/code/dotnet/gqlpoc/obj/Debug/netcoreapp2.0/gqlpoc.pdb
