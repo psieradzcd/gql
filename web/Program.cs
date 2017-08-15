@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace gqlpoc
+namespace Gqlpoc.Web
 {
     public class Program
     {
@@ -19,6 +19,11 @@ namespace gqlpoc
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((ctx, cfg) => {
+                    var envName = ctx.HostingEnvironment.EnvironmentName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), @"../", $"config/appsettings.{envName}.json");
+                    cfg.AddJsonFile(path);
+                })
                 .UseStartup<Startup>()
                 .Build();
     }

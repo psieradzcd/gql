@@ -1,4 +1,6 @@
 .history/
 .vscode/
-bin/
-obj/
+web/bin/
+web/obj
+database/bin/
+database/obj
