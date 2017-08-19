@@ -32,8 +32,11 @@ namespace Gqlpoc.Web.Controllers
         {
             if (query == null) { throw new ArgumentNullException(nameof(query)); }
 
-            var executionOptions = new ExecutionOptions { Schema = _schema, Query = query.Query };
-
+            var executionOptions = new ExecutionOptions { 
+                Schema = _schema, 
+                Query = query.Query,
+                Inputs = query.Variables.ToInputs()
+            };
             try
             {
                 var result = await _documentExecuter.ExecuteAsync(executionOptions).ConfigureAwait(false);
