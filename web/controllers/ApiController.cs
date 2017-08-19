@@ -35,7 +35,7 @@ namespace Gqlpoc.Web.Controllers
             var executionOptions = new ExecutionOptions { 
                 Schema = _schema, 
                 Query = query.Query,
-                Inputs = query.Variables.ToInputs()
+                Inputs = new Inputs(query.Variables)
             };
             try
             {

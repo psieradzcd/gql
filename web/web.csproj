@@ -7,8 +7,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\database\database.csproj" />
-    <ProjectReference Include="..\graphql.extensions\graphql.extensions.csproj" />
-  </ItemGroup>
+    <ProjectReference Include="..\gqlmodel\gqlmodel.csproj" />
+  </ItemGroup>  
   <ItemGroup>
     <PackageReference Include="graphql" Version="0.17.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />

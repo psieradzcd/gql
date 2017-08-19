@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Gqlpoc.Web.Query
 {
     public class GqlQuery
@@ -8,6 +10,6 @@ namespace Gqlpoc.Web.Query
         
         public string Query { get; set; }
         
-        public string Variables { get; set; }
+        public Dictionary<string, object> Variables { get; set; }
     }
 }

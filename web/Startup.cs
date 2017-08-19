@@ -71,6 +71,8 @@ namespace Gqlpoc.Web
             }
 
             app.UseMvc();
+            app.UseDefaultFiles();      
+            app.UseStaticFiles();
         }
     }
 }

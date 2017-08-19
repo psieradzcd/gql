@@ -24,6 +24,7 @@ namespace Gqlpoc.Web
                     var path = Path.Combine(Directory.GetCurrentDirectory(), @"../", $"config/appsettings.{envName}.json");
                     cfg.AddJsonFile(path);
                 })
+                .UseWebRoot("../public")
                 .UseStartup<Startup>()
                 .Build();
     }
