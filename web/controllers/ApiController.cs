@@ -4,13 +4,14 @@ using Gqlpoc.Database.Repositories;
 using Gqlpoc.Web.Query;
 using GraphQL;
 using GraphQL.Types;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gqlpoc.Web.Controllers
 {
     [Route("api")]
     public class ApiController : Controller
-    {
+    {   
         private IDocumentExecuter _documentExecuter { get; set; }
         private readonly ISchema _schema;
 
@@ -39,7 +40,7 @@ namespace Gqlpoc.Web.Controllers
 
                 if (result.Errors?.Count > 0) return BadRequest(result);
 
-                return Ok();
+                return Ok(result);
             }
             catch (Exception ex)
             {

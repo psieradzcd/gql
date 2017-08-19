@@ -2,9 +2,9 @@ using GraphQL.Types;
 
 namespace Gqlpoc.Web.Query
 {
-    public class AlbumInterface : InterfaceGraphType<Album>
+    public class AlbumType : ObjectGraphType<Album>
     {
-        public AlbumInterface()
+        public AlbumType()
         {
             Name = "Album";
 

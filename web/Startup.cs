@@ -29,10 +29,17 @@ namespace Gqlpoc.Web
             this.Configuration = configuration;
         }   
         
+        //The whole idea of expecting AspNet runtime to dispose your resources is flawed.
+        //This is especially relevent for db connections, can use it that way as its only 
+        //a PoC but DON'T DO IT AT HOME!
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddScoped<DbConnection>(s => new SqliteConnection(Configuration["connectionStrings:sqlite"]));
+            services.AddScoped<DbConnection>(_ => {
+                var conn = new SqliteConnection(Configuration["connectionStrings:sqlite"]);
+                conn.Open();
+                return conn;
+            });
             services.AddScoped<IDatabase, DatabaseContext>();
             services.AddScoped<IArtistRepository, SqliteArtistRepository>();
             
@@ -44,15 +51,15 @@ namespace Gqlpoc.Web
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
             services.Scan(scan => 
                 scan.FromEntryAssembly()
-                    .AddClasses(classes => classes.AssignableTo<IInterfaceGraphType>())
-                    .AsMatchingInterface()
+                    .AddClasses(classes => classes.AssignableTo(typeof(ObjectGraphType<>)))
+                    .AsImplementedInterfaces()
                     .WithScopedLifetime()
             );
 
-            var provider = services.BuildServiceProvider();
-            var schemaTypes = provider.GetServices<IInterfaceGraphType>();
-
             services.AddScoped<MusicQuery>();
+
+            var provider = services.BuildServiceProvider();
+            var schemaTypes = provider.GetServices<IGraphType>();
             services.AddScoped<ISchema>(_ => new MusicSchema(provider.GetService<MusicQuery>(), schemaTypes.ToArray()));
         }
 

@@ -9,19 +9,24 @@ namespace Gqlpoc.Web.Query
         public MusicQuery(IArtistRepository artistRepository)
         {
             _artistRepository = artistRepository;
+            Define();
         }
 
         protected virtual void Define()
         {
-            Field<ArtistInterface>(
+            Field<ArtistType>(
                 "artist",
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<IntGraphType>> { Name = "id" }
+                    new IntArgument { Name = "id" }
                 ),
                 resolve: ctx => {
                     var id = ctx.GetArgument<int>("id");
                     var artist = _artistRepository.GetArtist(id);
-                    return artist;
+                    return new Artist
+                    {
+                        Id = artist.Id,
+                        Name = artist.Name
+                    };
                 }
             );
         }

@@ -5,9 +5,9 @@ namespace Gqlpoc.Web.Query
 {
     public class MusicSchema : Schema
     {
-        public MusicSchema(MusicQuery query, IGraphType[] relatedTypes = null)
+        public MusicSchema(MusicQuery query, IGraphType[] relatedTypes)
         {
-            if (relatedTypes != null) RegisterTypes(relatedTypes);
+            RegisterTypes(relatedTypes);
             Query = query;
         }
     }
