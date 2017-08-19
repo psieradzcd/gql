@@ -1,6 +1,12 @@
 .history/
 .vscode/
+node_modules/
 web/bin/
 web/obj
 database/bin/
 database/obj
+tests/bin/
+tests/obj
+graphql.model/bin/
+graphql.model/obj
+package-lock.json

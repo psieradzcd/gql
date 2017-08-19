@@ -16,13 +16,14 @@ namespace Gqlpoc.Database.Repositories
             _db = db;
         }
 
-        public List<Album> GetAlbums(int id)
+        public List<Album> GetAlbums(int artistId)
         {
-            var result = _db.Query<Album>(
-                    @"select 
-                        * 
-                    from Albums
-                    where Albums.AlbumId = @0", id);
+                var result = _db.Query<Album>(
+                        @"select 
+                            AlbumId as Id,
+                            Title 
+                        from Albums
+                        where Albums.ArtistId = @0", artistId);
 
             return result.ToList();
         }
@@ -31,7 +32,8 @@ namespace Gqlpoc.Database.Repositories
         {   
             var result = _db.Query<Artist>(
                     @"select 
-                        * 
+                        ArtistId as Id,
+                        Name 
                     from Artists
                     where Artists.ArtistId = @0", id)
                 .SingleOrDefault();

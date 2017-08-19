@@ -1,7 +1,7 @@
 using System;
 using GraphQL.Types;
 
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.GraphQL.Model.Query
 {
     public class MusicSchema : Schema
     {

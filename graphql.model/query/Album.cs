@@ -1,4 +1,4 @@
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.GraphQL.Model.Query
 {
     public class Album
     {

@@ -3,11 +3,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\database\database.csproj" />
-    <ProjectReference Include="..\gqlmodel\gqlmodel.csproj" />
+    <ProjectReference Include="..\graphql.model\graphql.model.csproj" />
   </ItemGroup>  
   <ItemGroup>
     <PackageReference Include="graphql" Version="0.17.2" />

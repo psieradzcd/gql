@@ -1,6 +1,6 @@
 using GraphQL.Types;
 
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.GraphQL.Model.Query
 {
     public class AlbumType : ObjectGraphType<Album>
     {

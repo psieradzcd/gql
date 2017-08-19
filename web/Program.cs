@@ -23,7 +23,7 @@ namespace Gqlpoc.Web
                     var envName = ctx.HostingEnvironment.EnvironmentName;
                     var path = Path.Combine(Directory.GetCurrentDirectory(), @"../", $"config/appsettings.{envName}.json");
                     cfg.AddJsonFile(path);
-                })
+               })
                 .UseWebRoot("../public")
                 .UseStartup<Startup>()
                 .Build();

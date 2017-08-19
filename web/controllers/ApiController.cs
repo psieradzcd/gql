@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Gqlpoc.Database.Repositories;
-using Gqlpoc.Web.Query;
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Http;
@@ -21,16 +20,10 @@ namespace Gqlpoc.Web.Controllers
             _schema = schema;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok();
-        }
-
         [HttpPost]
         public async Task<IActionResult> Get([FromBody]GqlQuery query)
         {
-            if (query == null) { throw new ArgumentNullException(nameof(query)); }
+            if (query == null) return BadRequest("Missing query content");
 
             var executionOptions = new ExecutionOptions { 
                 Schema = _schema, 

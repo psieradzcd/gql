@@ -2,7 +2,7 @@ using System.Linq;
 using Gqlpoc.Database.Repositories;
 using GraphQL.Types;
 
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.GraphQL.Model.Query
 {
     public class ArtistType : ObjectGraphType<Artist>
     {

@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Gqlpoc.Database.Repositories;
-using Gqlpoc.Web.Query;
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
@@ -17,6 +16,8 @@ using Scrutor;
 using NPoco;
 using DatabaseContext = NPoco.Database;
 using System.Data.Common;
+using Gqlpoc.GraphQL.Model.Query;
+using GraphQL.Model;
 
 namespace Gqlpoc.Web
 {
@@ -50,7 +51,7 @@ namespace Gqlpoc.Web
         {
             services.AddScoped<IDocumentExecuter, DocumentExecuter>();
             services.Scan(scan => 
-                scan.FromEntryAssembly()
+                scan.FromAssemblyOf<IAssemblyInfo>()
                     .AddClasses(classes => classes.AssignableTo(typeof(ObjectGraphType<>)))
                     .AsImplementedInterfaces()
                     .WithScopedLifetime()

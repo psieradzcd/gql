@@ -7,6 +7,6 @@ namespace Gqlpoc.Database.Repositories
     {   
         Artist GetArtist(int id);
         
-        List<Album> GetAlbums(int id);
+        List<Album> GetAlbums(int artistId);
     }
 }

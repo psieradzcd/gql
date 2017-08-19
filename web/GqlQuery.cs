@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.Web
 {
     public class GqlQuery
     {

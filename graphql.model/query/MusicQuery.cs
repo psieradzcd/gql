@@ -1,7 +1,8 @@
 using Gqlpoc.Database.Repositories;
+using Gqlpoc.GraphQL.Model.Utils;
 using GraphQL.Types;
 
-namespace Gqlpoc.Web.Query
+namespace Gqlpoc.GraphQL.Model.Query
 {
     public class MusicQuery : ObjectGraphType
     {
