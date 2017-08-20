@@ -19,4 +19,4 @@ catch up.
 * "webpack" from the root of the project to build front-end assets;
 * "dotnet run" from within the "web" directory to start http server, http://localhost:5000/ in your browser for GraphiQL GUI or http://localhost:5000/api for actual endpoint you can query with PostMan. 
 
-See [.NET Core CLI tools for all the goodies](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x).
+See [.NET Core CLI tools](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x) for all the goodies.
