@@ -17,3 +17,4 @@ catch up.
 * "dotnet build" for specific projects to compile;
 * "dotnet test" (or "dotnet test --no-build --no-restore" to run without compilation) from within "tests" directory to run tests;
 * "webpack" from the root of the project to build front-end assets;
+* "dotnet run" from within the "web" directory to make it run, http://localhost:5000/ in your browser for GraphiQL GUI or http://localhost:5000/api for actual endpoint you can query with PostMan. 
