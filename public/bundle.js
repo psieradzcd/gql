@@ -38238,7 +38238,7 @@ function graphQLFetcher(graphQLParams) {
   }).then(response => response.json());
 }
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_graphiql___default.a, { fetcher: graphQLFetcher, editorTheme: 'material' }), document.getElementById('app'));
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_graphiql___default.a, { fetcher: graphQLFetcher }), document.getElementById('app'));
 
 /***/ }),
 /* 183 */
