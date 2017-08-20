@@ -18,7 +18,7 @@ namespace Gqlpoc.Database.Repositories
 
         public List<Album> GetAlbums(int artistId)
         {
-                var result = _db.Query<Album>(
+            var result = _db.Query<Album>(
                         @"select 
                             AlbumId as Id,
                             Title 
