@@ -7,6 +7,7 @@ namespace Gqlpoc.GraphQL.Model.Query
     public class MusicQuery : ObjectGraphType
     {
         private readonly IArtistRepository _artistRepository;
+        
         public MusicQuery(IArtistRepository artistRepository)
         {
             _artistRepository = artistRepository;

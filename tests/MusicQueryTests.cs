@@ -15,6 +15,7 @@ namespace Tests
     public class MusicQueryTests : IClassFixture<MusicQueryFixture>
     {
         private readonly MusicQueryFixture _fixture;
+       
         private readonly ITestOutputHelper _output;
 
         public MusicQueryTests(MusicQueryFixture fixture, ITestOutputHelper output)

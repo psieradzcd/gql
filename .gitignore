@@ -10,3 +10,4 @@ tests/obj
 graphql.model/bin/
 graphql.model/obj
 package-lock.json
+omnisharp.json
