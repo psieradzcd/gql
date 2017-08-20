@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Gqlpoc.Database.Repositories;
 using GraphQL;
 using GraphQL.Types;
+using Gqlpoc.GraphQL.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace Gqlpoc.Web.Controllers
     public class ApiController : Controller
     {   
         private IDocumentExecuter _documentExecuter { get; set; }
+
         private readonly ISchema _schema;
 
         public ApiController(IDocumentExecuter documentExecuter, ISchema schema)
