@@ -18,3 +18,5 @@ catch up.
 * "dotnet test" (or "dotnet test --no-build --no-restore" to run without compilation) from within the "tests" directory to run tests;
 * "webpack" from the root of the project to build front-end assets;
 * "dotnet run" from within the "web" directory to start http server, http://localhost:5000/ in your browser for GraphiQL GUI or http://localhost:5000/api for actual endpoint you can query with PostMan. 
+
+See [.NET Core CLI tools for all the goodies](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x).
