@@ -7,11 +7,11 @@ namespace Tests.Fixtures
 {
     public class GraphQLFixture : IDisposable
     {
-        public ISchema Schema { get; set; }       
+        public ISchema Schema { get; }       
 
-        public IDocumentExecuter Doc { get; set; }
+        public IDocumentExecuter Doc { get; }
 
-        public ExecutionErrors Errors { get; set; }
+        public ExecutionErrors Errors { get; }
 
         public GraphQLFixture()
         {

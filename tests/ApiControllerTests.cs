@@ -5,11 +5,13 @@ using NSubstitute;
 using Xunit;
 using Gqlpoc.Web.Controllers;
 using GraphQL;
+using Gqlpoc.GraphQL.Model;
 using Gqlpoc.Web;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Tests.Fixtures;
+using Tests.TestData;
 
 namespace Tests
 {
@@ -23,6 +25,7 @@ namespace Tests
         }
 
         [Fact]
+        [Trait("test", "unit")]
         public async Task WhenValidQueryIsPassed_OkResultIsReturned()
         {
             var executionResult = new ExecutionResult();
@@ -36,6 +39,7 @@ namespace Tests
         }
 
         [Fact]
+        [Trait("test", "unit")]
         public async Task WhenInvalidQueryIsPassed_BadRequestResultIsReturned()
         {
             var executionResult = new ExecutionResult
@@ -52,6 +56,7 @@ namespace Tests
         }
 
         [Fact]
+        [Trait("test", "unit")]
         public async Task WhenNoQueryIsPassed_BadRequestResultIsReturned()
         {
             var controller = new ApiController(_fixture.Doc, _fixture.Schema);

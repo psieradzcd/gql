@@ -6,6 +6,7 @@
   <ItemGroup>
     <ProjectReference Include="..\graphql.model.csproj" />
     <ProjectReference Include="..\web\web.csproj" />
+    <ProjectReference Include="..\database\database.csproj" />
   </ItemGroup>
   <ItemGroup> 
     <PackageReference Include="graphql" Version="0.17.2" />
